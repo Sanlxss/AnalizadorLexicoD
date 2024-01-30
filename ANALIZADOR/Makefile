@@ -15,9 +15,9 @@ INCLUDES = -I $(HEADER_FILES_DIR)
 OUTPUT = analizador
 
 #ficheros .h.  Si hay varios, se precede cada uno con $(HEADER_FILES_DIR)/
-LIB_HEADERS = $(HEADER_FILES_DIR)/analizadorSintactico.h $(HEADER_FILES_DIR)/estructuraAlmacenamiento.h $(HEADER_FILES_DIR)/gestorErrores.h $(HEADER_FILES_DIR)/lex.y.h $(HEADER_FILES_DIR)/tablaSimbolos.h $(HEADER_FILES_DIR)/definiciones.h 
+LIB_HEADERS = $(HEADER_FILES_DIR)/analizadorLexico.h $(HEADER_FILES_DIR)/analizadorSintactico.h $(HEADER_FILES_DIR)/estructuraAlmacenamiento.h $(HEADER_FILES_DIR)/gestorErrores.h $(HEADER_FILES_DIR)/sistemaEntrada.h $(HEADER_FILES_DIR)/tablaSimbolos.h $(HEADER_FILES_DIR)/definiciones.h 
 #FUENTES: todos los archivos .c necesarios
-SRCS = analizadorSintactico.c estructuraAlmacenamiento.c gestorErrores.c lex.yy.c tablaSimbolos.c main.c
+SRCS = analizadorLexico.c analizadorSintactico.c estructuraAlmacenamiento.c gestorErrores.c sistemaEntrada.c tablaSimbolos.c main.c
 
 #ficheros .o: todos los .o con un analogo .c en SRCS
 OBJS = $(SRCS:.c=.o)

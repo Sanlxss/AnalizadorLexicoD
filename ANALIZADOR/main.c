@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "tablaSimbolos.h"
 #include "analizadorSintactico.h"
-#include "lex.yy.h"
+#include "sistemaEntrada.h"
 #include "gestorErrores.h"
 
 
@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
 
     //Iniciamos sistema de Entrada y gestorErrores
     nombreFichero=argv[1];
-    abrirFichero(nombreFichero);
+    iniciarSistemaEntrada(nombreFichero);
     inicializarGestorErrores();
     //------------------------------------
 
@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
 
     //LIBERAMOS MEMORIA
     borrarTabla();
-    cerrarFichero();
+    finalizarSistemaEntrada();
     //-------------------------
 
     //FINALIZAMOS EL GESTOR DE ERRORES

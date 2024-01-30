@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include "analizadorSintactico.h"
-#include "lex.yy.h"
+#include "analizadorLexico.h"
 #include "tablaSimbolos.h"
 #include "gestorErrores.h"
 
